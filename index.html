@@ -3,230 +3,304 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Amrinder Singh | Portfolio</title>
+<title>Amrinder Singh | Software Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  body {
-    margin: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: #f8fafc;
-    color: #0f172a;
-  }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
 
-  header {
-    background: linear-gradient(135deg, #e0f2fe, #f1f5f9);
-    padding: 70px 20px;
-    text-align: center;
-    border-bottom: 1px solid #e2e8f0;
-  }
+html{scroll-behavior:smooth;}
 
-  header h1 {
-    margin: 0;
-    font-size: 2.8rem;
-    color: #0f172a;
-  }
+body{
+  background:#020617;
+  color:#e2e8f0;
+  line-height:1.6;
+}
 
-  header p {
-    color: #334155;
-    margin-top: 10px;
-  }
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+  position:fixed;
+  width:100%;
+  background:rgba(2,6,23,0.9);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #0f172a;
+  z-index:1000;
+}
 
-  nav {
-    margin-top: 15px;
-  }
+nav a{
+  margin:0 12px;
+  text-decoration:none;
+  color:#cbd5f5;
+  font-weight:500;
+}
 
-  nav a {
-    margin: 0 12px;
-    text-decoration: none;
-    color: #2563eb;
-    font-weight: 600;
-  }
+nav a:hover{color:#60a5fa;}
 
-  section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px 20px;
-  }
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:120px 60px;
+  gap:40px;
+}
 
-  h2 {
-    border-left: 5px solid #2563eb;
-    padding-left: 10px;
-    margin-bottom: 20px;
-  }
+.hero-text h1{
+  font-size:3.6rem;
+  letter-spacing:-1px;
+}
 
-  .card {
-    background: white;
-    border: 1px solid #e2e8f0;
-    padding: 18px;
-    margin-bottom: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
-  }
+.hero-text h1 span{color:#60a5fa;}
 
-  .tag {
-    display: inline-block;
-    background: #e0f2fe;
-    color: #0369a1;
-    padding: 5px 10px;
-    border-radius: 6px;
-    margin: 4px;
-    font-size: 0.85rem;
-  }
+.hero-text p{
+  margin:20px 0;
+  color:#cbd5f5;
+}
 
-  .contact a {
-    color: #2563eb;
-    text-decoration: none;
-  }
+.btn{
+  display:inline-block;
+  padding:12px 20px;
+  border-radius:10px;
+  text-decoration:none;
+  margin-right:10px;
+  font-weight:500;
+}
 
-  footer {
-    text-align: center;
-    padding: 25px;
-    background: #f1f5f9;
-    border-top: 1px solid #e2e8f0;
-    color: #64748b;
-  }
+.primary{
+  background:#2563eb;
+  color:white;
+}
 
-  .highlight {
-    color: #2563eb;
-    font-weight: 600;
+.primary:hover{background:#1d4ed8;}
+
+.secondary{
+  border:1px solid #1e293b;
+  color:#e2e8f0;
+}
+
+.secondary:hover{background:#020617;}
+
+.hero-img div{
+  width:280px;
+  height:280px;
+  border-radius:50%;
+  border:3px solid #60a5fa;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:6rem;
+  font-weight:700;
+  color:#60a5fa;
+  box-shadow:0 0 60px rgba(96,165,250,0.25);
+}
+
+section{
+  padding:100px 60px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.section-card{
+  background:#030a1a;
+  border:1px solid #1e293b;
+  border-radius:16px;
+  padding:40px;
+  margin-bottom:40px;
+  box-shadow:0 15px 50px rgba(0,0,0,0.7);
+  transition:0.3s;
+}
+
+.section-card:hover{
+  border-color:#60a5fa;
+  box-shadow:0 20px 60px rgba(96,165,250,0.15);
+}
+
+h2{
+  margin-bottom:25px;
+  color:#60a5fa;
+  font-size:2rem;
+}
+
+h2::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  margin-top:8px;
+  background:linear-gradient(90deg,#60a5fa,transparent);
+}
+
+.card{
+  background:#020617;
+  border:1px solid #0f172a;
+  padding:24px;
+  border-radius:14px;
+  margin-bottom:20px;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 60px rgba(0,0,0,0.8);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.skills span{
+  display:inline-block;
+  margin:6px;
+  padding:8px 14px;
+  border:1px solid #1e293b;
+  border-radius:8px;
+}
+
+.skills span:hover{
+  background:#0f172a;
+  color:#60a5fa;
+}
+
+ul{margin-top:10px;padding-left:20px;color:#94a3b8;}
+li{margin-bottom:6px;}
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#94a3b8;
+  border-top:1px solid #0f172a;
+}
+
+@media(max-width:900px){
+  .hero{
+    flex-direction:column;
+    text-align:center;
   }
+}
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Amrinder Singh</h1>
-  <p>Computer Science Student | Software Engineer | Cybersecurity & Data Science Enthusiast</p>
-
-  <p>
-    📞 715-440-5409 |
-    📧 amrinders0101@gmail.com |
-    🔗 github.com/amrinder0009 |
-    🔗 linkedin.com/amrindersingh09
-  </p>
-
-  <nav>
+<nav>
+  <b>Amrinder Singh</b>
+  <div>
     <a href="#about">About</a>
-    <a href="#education">Education</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#certs">Certifications</a>
-  </nav>
-</header>
+    <a href="#interests">Interests</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Amrinder</span></h1>
+    <p>
+      Computer Science student focused on Software Engineering, Cybersecurity, Data Science, and FinTech.
+      Passionate about building scalable backend systems, financial platforms, and secure applications.
+    </p>
+
+    <a href="mailto:amrinders0101@gmail.com" class="btn primary">Contact</a>
+    <a href="https://github.com/amrinder0009" target="_blank" class="btn secondary">GitHub</a>
+    <a href="https://linkedin.com/in/amrindersingh09" target="_blank" class="btn secondary">LinkedIn</a>
+  </div>
+
+  <div class="hero-img">
+    <div>A</div>
+  </div>
+</div>
 
 <section id="about">
-  <h2>About Me</h2>
-
-  <div class="card">
-    I am a Computer Science student at the <span class="highlight">University of Wisconsin–Parkside</span>
-    with strong interests in software engineering, cybersecurity, and data science.
-    I enjoy building scalable systems, working with algorithms, and solving real-world computing problems.
-    <br><br>
-    My experience spans IT support, full-stack development, cryptography, cloud systems, and backend engineering.
-  </div>
-</section>
-
-<section id="education">
-  <h2>Education</h2>
-
-  <div class="card">
-    <b>University of Wisconsin - Parkside</b><br/>
-    Bachelor of Science in Computer Science (Jan 2023 – Present)
-  </div>
-
-  <div class="card">
-    <b>University of Wisconsin - Stout</b><br/>
-    Bachelor of Science in Computer Science (Aug 2022 – Dec 2022)
-  </div>
-
-  <div class="card">
-    <b>Govt. Model Senior Secondary School, India</b><br/>
-    Physics, Chemistry, Mathematics (2016 – 2018)
+  <div class="section-card">
+    <h2>About Me</h2>
+    <p>
+      I am a Computer Science student at UW–Parkside with experience in backend systems,
+      IT infrastructure, and cloud technologies. I specialize in building scalable and secure applications.
+      <br><br>
+      I have supported over 2000 users in a professional IT environment and developed strong
+      problem-solving and communication skills.
+      <br><br>
+      My interests lie in FinTech and Asset Management systems, focusing on AI-driven analytics and financial platforms.
+    </p>
   </div>
 </section>
 
 <section id="experience">
-  <h2>Experience</h2>
-
-  <div class="card">
-    <b>IT Support Specialist</b> — UW Parkside (Jan 2024 – Present)
-    <ul>
-      <li>Supported 2000+ users (students, faculty, staff)</li>
-      <li>Resolved 80% issues at first contact</li>
-      <li>Handled hardware, software, and system troubleshooting</li>
-      <li>Documented incidents using ITIL standards</li>
-    </ul>
+  <div class="section-card">
+    <h2>Experience</h2>
+    <div class="card">
+      <b>IT Support Specialist</b><br/>
+      UW–Parkside (2024 – Present)
+      <ul>
+        <li>Supported 2000+ users</li>
+        <li>Resolved ~80% issues at first contact</li>
+        <li>Handled troubleshooting and escalations</li>
+        <li>Maintained ITIL documentation</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
+  <div class="section-card">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>MoneyMentor</h3>
+        <p>AI-powered finance platform with dashboards, analytics, and fraud detection.</p>
+      </div>
 
-  <div class="card">
-    <b>MoneyMentor – Finance AI App</b>
-    <p>Full-stack finance tracker with AI insights and secure authentication.</p>
-    <span class="tag">Python</span>
-    <span class="tag">FastAPI</span>
-    <span class="tag">PostgreSQL</span>
-    <span class="tag">React</span>
-  </div>
+      <div class="card">
+        <h3>Shortest Path</h3>
+        <p>Dijkstra-based routing system using real-world APIs.</p>
+      </div>
 
-  <div class="card">
-    <b>Shortest Path Simulation</b>
-    <p>Graph-based routing system using Dijkstra’s Algorithm with real-time APIs.</p>
-    <span class="tag">Java</span>
-    <span class="tag">Algorithms</span>
-    <span class="tag">REST APIs</span>
-  </div>
-
-  <div class="card">
-    <b>Emergency Response System</b>
-    <p>Priority-based incident system using custom data structures (no Java Collections).</p>
-    <span class="tag">Java</span>
-    <span class="tag">OOP</span>
-    <span class="tag">Data Structures</span>
+      <div class="card">
+        <h3>Emergency System</h3>
+        <p>Priority-based dispatch system using custom data structures.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section id="skills">
-  <h2>Technical Skills</h2>
-
-  <div class="card">
-    <span class="tag">Java</span>
-    <span class="tag">Python</span>
-    <span class="tag">C/C++</span>
-    <span class="tag">SQL (Postgres)</span>
-    <span class="tag">JavaScript</span>
-    <span class="tag">React</span>
-    <span class="tag">Node.js</span>
-    <span class="tag">Docker</span>
-    <span class="tag">Git/GitHub</span>
-    <span class="tag">Linux/UNIX</span>
-    <span class="tag">Cloud (GCP)</span>
-    <span class="tag">Cybersecurity</span>
+  <div class="section-card">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span>Java</span><span>Python</span><span>C/C++</span>
+      <span>JavaScript</span><span>React</span><span>Node.js</span>
+      <span>SQL</span><span>Docker</span><span>Git</span>
+      <span>Linux</span><span>Cloud</span><span>Cybersecurity</span>
+    </div>
   </div>
 </section>
 
-<section id="certs">
-  <h2>Certifications (In Progress)</h2>
-
-  <div class="card">
-    <b>Data Science Certificate</b> — University of Wisconsin–Parkside (Expected)
+<section id="interests">
+  <div class="section-card">
+    <h2>Interests</h2>
+    FinTech • Asset Management • Backend Systems • Cybersecurity • Data Science
   </div>
+</section>
 
-  <div class="card">
-    <b>Cybersecurity Certificate</b> — University of Wisconsin–Parkside (Expected)
-  </div>
-
-  <div class="card">
-    <b>Linux / UNIX Certificate</b> — University of Wisconsin–Parkside (Expected)
+<section id="contact">
+  <div class="section-card">
+    <h2>Contact</h2>
+    Email: <a href="mailto:amrinders0101@gmail.com">amrinders0101@gmail.com</a><br/>
+    GitHub: <a href="https://github.com/amrinder0009">github.com/amrinder0009</a><br/>
+    LinkedIn: <a href="https://linkedin.com/in/amrindersingh09">linkedin.com/in/amrindersingh09</a>
   </div>
 </section>
 
 <footer>
-  © 2026 Amrinder Singh | Built with GitHub Pages
+  © 2026 Amrinder Singh
 </footer>
 
 </body>
